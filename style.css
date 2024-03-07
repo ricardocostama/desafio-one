@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --cor--primaria: #D8DFE8;
+    --cor--secundaria: #0A3871;
+    --cor--hover: #024699;
+    --cor--tercearia: #ffffff; 
+    --cor--quarternario: #495057;
+    
+
+    --fonte--primaria: "Inter", sans-serif;    
+}
+
+body {
+    font-family: var(--fonte--primaria);
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor--primaria);
+}
+
+header {
+    padding: 10px;
+}
+
+.logo-alura {
+    max-width: 200px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+section.conteudo_left {
+    width: 50%; /* 50% da largura da tela, subtraindo a margem entre as seções */
+    background-color: var(--cor--primaria);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+section.conteudo_right {
+    width: 50%; /* 50% da largura da tela, subtraindo a margem entre as seções */
+    background-color: var(--cor--primaria);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.text-area, .mensagem {
+    width: calc(100% - 30px); /* Largura total, subtraindo a borda e o preenchimento */
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    text-transform: lowercase;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: var(--fonte--primaria);
+    color: var(--cor--secundaria);
+}
+
+::placeholder { color: var(--cor--quarternario)}
+    .text-area:focus {
+        outline: none;
+    }
+
+.info-area {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.info-area img {
+    margin-right: 5px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+.btn-criptografar, .btn-descriptografar, .btn-copiar {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 328px;
+}
+
+.btn-criptografar:hover, .btn-descriptografar:hover, .btn-copiar:hover {
+    background-color: #0056b3;
+}
+
+@media only screen and (max-width: 900px) {
+    section.conteudo_left, section.conteudo_right {
+        width: 100%;
+        margin: 10px;
+    }
+}
